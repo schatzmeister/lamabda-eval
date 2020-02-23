@@ -23,16 +23,15 @@ fn eval(input: &mut String) -> String {
     if input == ":quit" {
         exit(0);
     }
-    todo!()
+    input.clone()
 }
 
 fn main() {
-    let mut input = String::new();
-    
     startup();
     
     loop {
         print!("> ");
+        let mut input = String::new();
         read(&mut input);
         println!("{}", eval(&mut input))
     }
